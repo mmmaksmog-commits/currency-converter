@@ -2,7 +2,7 @@
 
 **Конвертер валют с актуальными курсами.**
 
-### ▶️ [Открыть](https://mmmaksmog-commits.github.io/currency-converter/)
+### ▶️ [Открыть](https://mysik-portfolio.vercel.app/currency-converter/)
 
 Работает на телефоне и на ПК, без установки и регистрации.
 
@@ -30,4 +30,4 @@ python3 -m http.server 8000
 
 ---
 
-Часть [портфолио](https://mmmaksmog-commits.github.io/).
+Часть [портфолио](https://mysik-portfolio.vercel.app/).
