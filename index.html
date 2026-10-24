@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Курс — конвертер валют</title>
+  <meta name="description" content="Конвертер валют с актуальными курсами: 30+ валют, быстрый обмен и избранные валюты.">
+  <meta name="theme-color" content="#0d3b36">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <h1>Курс</h1>
+      <p class="updated" id="updated">Загружаю курсы…</p>
+    </header>
+
+    <section class="converter">
+      <div class="side">
+        <label for="amount">Отдаю</label>
+        <div class="field">
+          <input id="amount" inputmode="decimal" value="1000" autocomplete="off" aria-label="Сумма">
+          <select id="from" aria-label="Из валюты"></select>
+        </div>
+        <small class="cur-name" id="fromName"></small>
+      </div>
+      <button class="swap" id="swap" aria-label="Поменять местами">⇅</button>
+      <div class="side side--to">
+        <label for="result">Получаю</label>
+        <div class="field">
+          <input id="result" inputmode="decimal" autocomplete="off" aria-label="Результат">
+          <select id="to" aria-label="В валюту"></select>
+        </div>
+        <small class="cur-name" id="toName"></small>
+      </div>
+      <p class="rate" id="rate"></p>
+    </section>
+
+    <div class="pairs" id="pairs" aria-label="Популярные пары"></div>
+
+    <section class="card">
+      <div class="card__head">
+        <h2>В других валютах</h2>
+        <button class="link" id="editFavs">Изменить</button>
+      </div>
+      <ul class="others" id="others"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Быстрая таблица</h2>
+      <table class="table" id="table"></table>
+    </section>
+
+    <p class="source">Курсы: <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a>, обновляются раз в сутки</p>
+  </main>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet__box">
+      <h2>Избранные валюты</h2>
+      <input class="search" id="favSearch" placeholder="Поиск валюты" autocomplete="off">
+      <div class="fav-list" id="favList"></div>
+      <button class="btn" id="favDone">Готово</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
